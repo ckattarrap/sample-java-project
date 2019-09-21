@@ -1,13 +1,11 @@
 node {
-
-stage('scm') {
-    // some block
+    
+stage('SCM') {
     git 'https://github.com/ckattarrap/sample-java-project.git'
 }
-
-stage('build') {
-    // some block
-    sh label: '', script: 'mvn package'
+  
+  stage('Build') {
+    script: 'mvn clean install package'
 }
-
+  
 }
